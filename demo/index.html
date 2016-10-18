@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Demo: AngularJS "Select All"-Checkbox</title>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+    <script type="text/javascript" src="../src/selectall.directive.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</head>
+
+<body ng-app="myApp">
+<div ng-controller="PlaygroundController" class="container">
+    <div ng-repeat="elem in list">
+        <input type="checkbox" ng-model="elem.isSelected"/> {{elem.desc}}
+    </div>
+    <hr/>
+    <select-all-checkbox items="list" prop="isSelected"></select-all-checkbox>
+    Select all
+</div>
+</body>
+</html>
